@@ -1,0 +1,14 @@
+[project]
+name = "agcoin"
+description = "AGCOIN fungible token on Stacks"
+authors = []
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.agcoin]
+path = "contracts/agcoin.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
